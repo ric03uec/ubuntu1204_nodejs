@@ -1,7 +1,6 @@
-FROM shippableimages/ubuntu1204_base:0.0.1
+FROM shippableimages/ubuntu1204_base:0.0.2
 
 RUN apt-get update && apt-get install -y \
-    python-software-properties \
     ca-certificates \
     curl;
 
@@ -22,4 +21,4 @@ RUN . /root/.nvm/nvm.sh && nvm install 0.10;
 RUN . /root/.nvm/nvm.sh && nvm install 0.11;
 RUN . /root/.nvm/nvm.sh && nvm alias default 0.10;
 
-#CMD [ "node" ]
+CMD [ "node" ]
